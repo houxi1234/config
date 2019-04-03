@@ -1,0 +1,19 @@
+spring:
+  redis:
+    database: 0
+    timeout: 500ms
+    jedis:
+      pool:
+        max-active: 200
+        max-idle: 100
+        min-idle: 8
+        max-redirects: 3
+        test-on-borrow: true
+        test-on-return: false
+        max-wait: 500ms
+        block-when-exhausted: true
+    cluster:
+      nodes:
+        - 119.3.66.33:7001
+        - 119.3.66.33:7002
+        - 119.3.66.33:7003
